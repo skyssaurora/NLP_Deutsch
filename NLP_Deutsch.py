@@ -137,26 +137,26 @@ def get_img_as_base64(file):
 
 # CODE UNTUK TAMPILAN WEB (USER INTERFACE)
 
-# with st.sidebar:
+with st.sidebar:
     
-#     st.title('Kalima Perbandingan dan Lampau :sparkles:')
+    st.title('Kalima Perbandingan dan Lampau :sparkles:')
 
-#     img = get_img_as_base64("./images/foto sidebar.jpeg")
+    img = get_img_as_base64("./Images/foto sidebar.jpeg")
 
-#     page_bg_img = f"""
-#     <style>
-#     [data-testid="stSidebar"] {{
-#         background-image: url("data:image/png;base64,{img}");
-#         background-size: cover;
-#         background-position: center left; 
-#         background-repeat: no-repeat;
-#         background-attachment: fixed;
-#         background-size: contain; /* Bisa juga diganti dengan contain */
-#     }}
-#     </style>
-#     """
+    page_bg_img = f"""
+    <style>
+    [data-testid="stSidebar"] {{
+        background-image: url("data:image/png;base64,{img}");
+        background-size: cover;
+        background-position: center left; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: contain; /* Bisa juga diganti dengan contain */
+    }}
+    </style>
+    """
 
-#     st.markdown(page_bg_img, unsafe_allow_html=True)
+    st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 
@@ -166,18 +166,45 @@ with st.container():
     st.caption('Created by: ')
 
     # Kotak kosong buat diisi
-    teks_langsung = st.text_area("Masukkan teks:", height=200)
+    teks_langsung = st.text_area("Masukkan Teks:", height=68)
     placeholder_langsung = st.empty()
     placeholder_langsung_2 = st.empty()
 
     # Upload file
-    uploaded_file = st.file_uploader("Pilih file .txt", type=["txt","pdf"])
-    placeholder_file = st.empty()
+    uploaded_file = st.file_uploader("Pilih File", type=["txt","pdf"])
     placeholder_file_teks = st.empty()
+    placeholder_file = st.empty()
 
-    # Kalau ada dile yang di upload
+    # Kalau ada file yang di upload
     df_main = ""
     teks_dari_file = ""
+    
+    if teks_langsung == '':
+
+        placeholder_langsung.empty()
+
+    else:
+
+        df_main = get_data_frame(teks_langsung)
+        placeholder_langsung.dataframe(df_main)
+
+        # Menyimpan DataFrame ke file Excel dalam memori
+        output = BytesIO()
+        with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+            df_main.to_excel(writer, index=False, sheet_name='Sheet1')
+            # writer.save()
+
+        # Mendapatkan data file Excel
+        excel_data = output.getvalue()
+
+        # Tombol untuk mengunduh file Excel
+        placeholder_langsung_2.download_button(
+            label="Download File Excel",
+            data=excel_data,
+            file_name="Hasil deteksi.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        )
+    #
     if uploaded_file is not None:
 
         # try:
@@ -226,46 +253,20 @@ with st.container():
 
         # Tombol untuk mengunduh file Excel
         placeholder_file.download_button(
+    
             label="Download File Excel",
             data=excel_data,
             file_name="Hasil deteksi.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
 
-    else:
-        st.write("Belum ada file yang diunggah.")
-        placeholder_file_teks.empty()
 
-    if teks_langsung == '':
-
-        placeholder_langsung.empty()
-
-    else:
-
-        df_main = get_data_frame(teks_langsung)
-        placeholder_langsung.dataframe(df_main)
-
-        # Menyimpan DataFrame ke file Excel dalam memori
-        output = BytesIO()
-        with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
-            df_main.to_excel(writer, index=False, sheet_name='Sheet1')
-            # writer.save()
-
-        # Mendapatkan data file Excel
-        excel_data = output.getvalue()
-
-        # Tombol untuk mengunduh file Excel
-        placeholder_langsung_2.download_button(
-            label="Download File Excel",
-            data=excel_data,
-            file_name="Hasil deteksi.xlsx",
-            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-        )
 
     if st.button("Hapus Semua Output"):
         placeholder_langsung.empty()
         placeholder_file.empty()
         placeholder_langsung_2.empty()
+        placeholder_file_teks.empty()
 
 # IMPORT FONT DARI GITHUB PAGES
 st.html(
@@ -306,7 +307,7 @@ page_bg_img = f"""
 <style>
 
 [data-testid="stAppViewContainer"] {{
-background-image: url("data:image/png;base64,{get_img_as_base64("./images/Ghibli2.jpg")}");
+background-image: url("data:image/png;base64,{get_img_as_base64("./Images/Ghibli2.jpg")}");
 background-size: cover;
 background-position: top center; 
 background-repeat: no-repeat;
