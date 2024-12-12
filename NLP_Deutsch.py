@@ -298,25 +298,34 @@ st.html(
 st.html(
     """
     <style>
-    h1 {
+    [data-testid="stMarkdownContainer"] h1 {
         font-family: "Royal Avenue", cursive;
-        background: rgba(255,255,255,0);
     }
     </style>
     """
 )
 
-### Ubah font h1
+### Header Menjadi Transparan
 st.html(
     """
     <style>
-    [data-testid="stTextArea"] {
-        background: rgba(144,144,144,1);
+    [data-testid="stHeader"] {
+        background: rgba(0,0,0,0);
     }
     </style>
     """
 )
 
+### Titik tiga menjadi punya background
+st.html(
+    """
+    <style>
+    [data-testid="stBaseButton-headerNoPadding"] {
+        background: rgba(0,0,0,1);
+    }
+    </style>
+    """
+)
 
 ### Background Image
 page_bg_img = f"""
@@ -346,5 +355,3 @@ components.html(
     height=0,
     width=0,
 )
-
-spay
