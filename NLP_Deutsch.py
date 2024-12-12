@@ -179,6 +179,8 @@ with st.container():
     df_main = ""
     teks_dari_file = ""
     
+    # Algoritma untuk deteksi dengan input Kalimat
+
     if teks_langsung == '':
 
         placeholder_langsung.empty()
@@ -204,7 +206,9 @@ with st.container():
             file_name="Hasil deteksi.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
-    #
+
+    # Algoritma untuk deteksi dengan input File 
+
     if uploaded_file is not None:
 
         # try:
@@ -302,6 +306,18 @@ st.html(
     """
 )
 
+### Ubah font h1
+st.html(
+    """
+    <style>
+    [data-testid="stTextArea"] {
+        background: rgba(144,144,144,1);
+    }
+    </style>
+    """
+)
+
+
 ### Background Image
 page_bg_img = f"""
 <style>
@@ -330,3 +346,5 @@ components.html(
     height=0,
     width=0,
 )
+
+spay
