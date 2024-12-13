@@ -391,7 +391,7 @@ page_bg_img = f"""
 
 [data-testid="stAppViewContainer"] {{
 background-image: url("data:image/png;base64,{get_img_as_base64("./Images/BARU.JPG")}");
-background-size: cover;
+background-size: contain;
 background-position: center center; 
 background-repeat: no-repeat;
 background-attachment: fixed;
