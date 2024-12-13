@@ -139,7 +139,7 @@ def get_img_as_base64(file):
 
 with st.sidebar:
     
-    st.title('Kalimat Perbandingan dan Lampau :sparkles:')
+    st.title('Syntax Spion')
 
     img = get_img_as_base64("./Images/Sidebar.PNG")
 

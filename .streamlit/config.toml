@@ -4,4 +4,3 @@ primaryColor = "#4CAF50"  # Warna utama, misalnya hijau
 backgroundColor = "#0e1117"  # Warna latar belakang
 secondaryBackgroundColor = "#262730"  # Warna latar belakang kedua
 textColor = "#FFFFFF"  # Warna teks
-font = "sans serif"  # Pilihan: "serif", "sans serif", atau "monospace"
