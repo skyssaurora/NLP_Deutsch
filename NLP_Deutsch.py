@@ -151,7 +151,6 @@ with st.sidebar:
         background-position: center left; 
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size: contain; /* Bisa juga diganti dengan contain */
     }}
     </style>
     """
