@@ -1,6 +1,5 @@
 [theme]
-base = "dark"  # Pilihan: "light" (default) atau "dark"
-primaryColor = "#4CAF50"  # Warna utama, misalnya hijau
-backgroundColor = "#0e1117"  # Warna latar belakang
-secondaryBackgroundColor = "#262730"  # Warna latar belakang kedua
-textColor = "#FFFFFF"  # Warna teks
+primaryColor="#000000"
+backgroundColor="#993723"
+secondaryBackgroundColor="#ede1c7"
+textColor="#000000"

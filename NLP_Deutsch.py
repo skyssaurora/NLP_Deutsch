@@ -302,7 +302,7 @@ st.html(
     """
 )
 
-### Ubah font h1
+### Ubah font h1 dan h2
 st.html(
     """
     <style>
@@ -380,7 +380,7 @@ components.html(
     const container = window.parent.document.querySelectorAll("div.stVerticalBlock");
     container[1].style.backgroundColor = 'rgba(147, 55, 35, 0.4)';
     container[1].style.borderRadius = '10px';
-    container[1].style.border = '2px solid #933823';
+    container[1].style.border = '2px solid #933723';
     container[1].style.paddingLeft = '1rem';
     container[1].style.paddingRight = '1rem';
     </script>
