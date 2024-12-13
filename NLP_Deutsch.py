@@ -332,7 +332,7 @@ page_bg_img = f"""
 <style>
 
 [data-testid="stAppViewContainer"] {{
-background-image: url("data:image/png;base64,{get_img_as_base64("./Images/Ghibli2.jpg")}");
+background-image: url("data:image/png;base64,{get_img_as_base64("./Images/BARU.JPG")}");
 background-size: cover;
 background-position: top center; 
 background-repeat: no-repeat;
