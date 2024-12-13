@@ -357,6 +357,15 @@ st.html(
     </style>
     """
 )
+st.html(
+    """
+    <style>
+    [data-testid="stBaseButton-headerNoPadding"] hover:button{
+        background: #933723;
+    }
+    </style>
+    """
+)
 
 ### Background Image
 page_bg_img = f"""
@@ -378,7 +387,7 @@ components.html(
     """
     <script>
     const container = window.parent.document.querySelectorAll("div.stVerticalBlock");
-    container[1].style.backgroundColor = 'rgba(147, 55, 35, 0.4)';
+    container[1].style.backgroundColor = 'rgba(147, 55, 35, 0.2)';
     container[1].style.borderRadius = '10px';
     container[1].style.border = '2px solid #933723';
     container[1].style.paddingLeft = '1rem';
