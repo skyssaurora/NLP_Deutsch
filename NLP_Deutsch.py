@@ -245,11 +245,7 @@ with st.container():
         else:
             
             st.write("File tidak berhasil di read")
-
-        # except Exception as e:
-
-        #     st.error(f"Error reading the PDF file: {e}")
-        
+      
         df_main = get_data_frame(teks_dari_file)
         placeholder_file_teks.write(df_main)
 
@@ -388,7 +384,6 @@ st.html(
 st.html(
     f"""
     <style>
-    
     [data-testid="stAppViewContainer"] {{
     background-image: url("data:image/png;base64,{get_img_as_base64("./Images/BARU.JPG")}");
     background-size: cover;
@@ -465,3 +460,21 @@ st.html(
     </style>
     """
 )
+
+### Ganti Warna Tabel
+# st.html(
+#     """
+#     <style>
+#     div {
+#         --gdg-bg-cell: rgba(237, 225, 199, 1) !important;
+#         --gdg-bg-cell-medium: rgba(237, 225, 199, 1) !important;
+#         --gdg-bg-header: rgba(237, 225, 199, 0.5) !important;
+#         --gdg-bg-header-has-focus: rgba(237, 225, 199, 0.5) !important;
+#         --gdg-bg-header-hovered: rgba(237, 225, 199, 0.5) !important;
+#         --gdg-bg-bubble: rgba(237, 225, 199, 1) !important;
+#         --gdg-bg-bubble-selected: rgba(237, 225, 199, 1) !important;
+        
+#     }
+#     </style>
+#     """
+# )
