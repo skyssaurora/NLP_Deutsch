@@ -375,6 +375,15 @@ st.html(
     </style>
     """
 )
+st.html(
+    """
+    <style>
+    button[kind="headerNoPadding"]:hover{
+        background: #ede1c7;
+    }
+    </style>
+    """
+)
 
 ### Background Image
 page_bg_img = f"""
