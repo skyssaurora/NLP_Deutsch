@@ -143,28 +143,27 @@ with st.sidebar:
 
     img = get_img_as_base64("./Images/Sidebar.PNG")
 
-    page_bg_img = f"""
-    <style>
-    [data-testid="stSidebar"] {{
-        background-image: url("data:image/png;base64,{img}");
-        background-size: contain;
-        background-position: bottom left; 
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        /* width: 277px !important; Membatasi lebar maksimal */
-    }}
-    [data-testid="stSidebar"][aria-expanded="false"] {{
-        max-width: 0px; /* Atur lebar maksimal */
-        min-width: 0px;  /* Atur lebar minimal */
-    }}
-    [data-testid="stSidebar"][aria-expanded="true"] {{
-        max-width: 278px; /* Atur lebar maksimal */
-        min-width: 100px;  /* Atur lebar minimal */
-    }}
-    </style>
-    """
-
-    st.html(page_bg_img)
+    st.html(
+        f"""
+        <style>
+        [data-testid="stSidebar"] {{
+            background-image: url("data:image/png;base64,{img}");
+            background-size: contain;
+            background-position: bottom left; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* width: 277px !important; Membatasi lebar maksimal */
+        }}
+        [data-testid="stSidebar"][aria-expanded="false"] {{
+            max-width: 0px; /* Atur lebar maksimal */
+            min-width: 0px;  /* Atur lebar minimal */
+        }}
+        [data-testid="stSidebar"][aria-expanded="true"] {{
+            max-width: 278px; /* Atur lebar maksimal */
+            min-width: 100px;  /* Atur lebar minimal */
+        }}
+        </style>
+        """)
 
 
 
@@ -386,19 +385,32 @@ st.html(
 )
 
 ### Background Image
-page_bg_img = f"""
-<style>
+st.html(
+    f"""
+    <style>
+    
+    [data-testid="stAppViewContainer"] {{
+    background-image: url("data:image/png;base64,{get_img_as_base64("./Images/BARU.JPG")}");
+    background-size: cover;
+    background-position: center center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }}
+    """)
 
-[data-testid="stAppViewContainer"] {{
-background-image: url("data:image/png;base64,{get_img_as_base64("./Images/BARU.JPG")}");
-background-size: cover;
-background-position: center center; 
-background-repeat: no-repeat;
-background-attachment: fixed;
-}}
-"""
-
-st.html(page_bg_img)
+st.html(
+    f"""
+    <style>
+    @media (max-width: 600px) {{
+        [data-testid="stAppViewContainer"] {{
+        background-image: url("data:image/png;base64,{get_img_as_base64("./Images/BARU_600.JPG")}");
+        background-size: cover;
+        background-position: center center; 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        }}
+    }}
+    """)
 
 ### Ubah BACKGROUND SATU CONTAINER
 components.html(
