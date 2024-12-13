@@ -139,9 +139,9 @@ def get_img_as_base64(file):
 
 with st.sidebar:
     
-    st.title('Kalima Perbandingan dan Lampau :sparkles:')
+    st.title('Kalimat Perbandingan dan Lampau :sparkles:')
 
-    img = get_img_as_base64("./Images/foto sidebar.jpeg")
+    img = get_img_as_base64("./Images/sidebar.JPG")
 
     page_bg_img = f"""
     <style>
@@ -347,9 +347,9 @@ components.html(
     """
     <script>
     const container = window.parent.document.querySelectorAll("div.stVerticalBlock");
-    container[1].style.backgroundColor = 'rgba(200, 200, 200, 0.6)';
+    container[1].style.backgroundColor = 'rgba(147, 55, 35, 0.4)';
     container[1].style.borderRadius = '10px';
-    container[1].style.border = '2px solid #fff';
+    container[1].style.border = '2px solid #933823';
     </script>
     """,
     height=0,
