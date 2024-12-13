@@ -402,15 +402,6 @@ components.html(
 st.html(
     """
     <style>
-    [data-baseweb="base-input"] {
-        background-color: rgba(237, 225, 199, 0.8);
-    }
-    </style>
-    """
-)
-st.html(
-    """
-    <style>
     [data-baseweb="textarea"] {
         background-color: rgba(0, 0, 0, 0);
     }
@@ -420,8 +411,26 @@ st.html(
 st.html(
     """
     <style>
+    [data-baseweb="base-input"] {
+        background-color: rgba(237, 225, 199, 0.5);
+    }
+    </style>
+    """
+)
+st.html(
+    """
+    <style>
     [data-testid="stFileUploaderDropzone"] {
-        background-color: rgba(237, 225, 199, 0.8);
+        background-color: rgba(237, 225, 199, 0.5);
+    }
+    </style>
+    """
+)
+st.html(
+    """
+    <style>
+    [data-testid="stBaseButton-secondary"] {
+        background-color: rgba(237, 225, 199, 0.5);
     }
     </style>
     """
