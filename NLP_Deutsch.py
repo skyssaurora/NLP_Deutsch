@@ -148,7 +148,7 @@ with st.sidebar:
     [data-testid="stSidebar"] {{
         background-image: url("data:image/png;base64,{img}");
         background-size: cover;
-        background-position: center center; 
+        background-position: center left; 
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: contain; /* Bisa juga diganti dengan contain */
