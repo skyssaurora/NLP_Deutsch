@@ -139,7 +139,7 @@ def get_img_as_base64(file):
 
 with st.sidebar:
     
-    st.title('Syntax Spion')
+    st.header('Syntax Spion')
 
     img = get_img_as_base64("./Images/Sidebar.PNG")
 
@@ -147,22 +147,31 @@ with st.sidebar:
     <style>
     [data-testid="stSidebar"] {{
         background-image: url("data:image/png;base64,{img}");
-        background-size: cover;
-        background-position: center left; 
+        background-size: contain;
+        background-position: bottom left; 
         background-repeat: no-repeat;
         background-attachment: fixed;
+        /* width: 277px !important; Membatasi lebar maksimal */
+    }}
+    [data-testid="stSidebar"][aria-expanded="false"] {{
+        max-width: 0px; /* Atur lebar maksimal */
+        min-width: 0px;  /* Atur lebar minimal */
+    }}
+    [data-testid="stSidebar"][aria-expanded="true"] {{
+        max-width: 278px; /* Atur lebar maksimal */
+        min-width: 100px;  /* Atur lebar minimal */
     }}
     </style>
     """
 
-    st.markdown(page_bg_img, unsafe_allow_html=True)
+    st.html(page_bg_img)
 
 
 
 with st.container():
 
     st.title('Deteksi Kalimat Perbandingan dan Lampau')
-    st.caption('Created by: ')
+    # st.caption('Created by: ')
 
     # Kotak kosong buat diisi
     teks_langsung = st.text_area("Masukkan Teks:", height=68)
@@ -297,9 +306,20 @@ st.html(
 st.html(
     """
     <style>
-    [data-testid="stMarkdownContainer"] h1 {
+    [data-testid="stMarkdownContainer"] h1{
         font-family: "Royal Avenue", cursive;
         color: #ede1c7;
+    }
+    </style>
+    """
+)
+st.html(
+    """
+    <style>
+    [data-testid="stMarkdownContainer"] h2{
+        font-family: "Royal Avenue", cursive;
+        color: #ede1c7;
+        font-size: 1.75rem;
     }
     </style>
     """
@@ -311,6 +331,17 @@ st.html(
     <style>
     [data-testid="stHeader"] {
         background: rgba(0,0,0,0);
+    }
+    </style>
+    """
+)
+
+### Warna svg (titik tiga dll)
+st.html(
+    """
+    <style>
+    button svg {
+        color: #ede1c7;
     }
     </style>
     """
@@ -350,6 +381,8 @@ components.html(
     container[1].style.backgroundColor = 'rgba(147, 55, 35, 0.4)';
     container[1].style.borderRadius = '10px';
     container[1].style.border = '2px solid #933823';
+    container[1].style.paddingLeft = '1rem';
+    container[1].style.paddingRight = '1rem';
     </script>
     """,
     height=0,
