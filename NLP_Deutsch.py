@@ -397,3 +397,32 @@ components.html(
     height=0,
     width=0,
 )
+
+### Ubah warna isi kontainer
+st.html(
+    """
+    <style>
+    [data-baseweb="base-input"] {
+        background-color: rgba(237, 225, 199, 0.8);
+    }
+    </style>
+    """
+)
+st.html(
+    """
+    <style>
+    [data-baseweb="textarea"] {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    </style>
+    """
+)
+st.html(
+    """
+    <style>
+    [data-testid="stFileUploaderDropzone"] {
+        background-color: rgba(237, 225, 199, 0.8);
+    }
+    </style>
+    """
+)
