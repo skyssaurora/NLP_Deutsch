@@ -300,6 +300,7 @@ st.html(
     <style>
     [data-testid="stMarkdownContainer"] h1 {
         font-family: "Royal Avenue", cursive;
+        color: #ede1c7;
     }
     </style>
     """
@@ -321,7 +322,7 @@ st.html(
     """
     <style>
     [data-testid="stBaseButton-headerNoPadding"] {
-        background: rgba(0,0,0,1);
+        background: #933723;
     }
     </style>
     """
