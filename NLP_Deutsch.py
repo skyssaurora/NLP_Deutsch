@@ -341,7 +341,16 @@ st.html(
     """
     <style>
     button svg {
-        color: #ede1c7;
+        color: #000;
+    }
+    </style>
+    """
+)
+st.html(
+    """
+    <style>
+    [data-testid="stFileUploaderDropzoneInstructions"] svg {
+        color: #933723;
     }
     </style>
     """
@@ -360,8 +369,8 @@ st.html(
 st.html(
     """
     <style>
-    [data-testid="stBaseButton-headerNoPadding"] hover:button{
-        background: #933723;
+    [data-testid="stBaseButton-headerNoPadding"]:hover{
+        background: #ede1c7;
     }
     </style>
     """
