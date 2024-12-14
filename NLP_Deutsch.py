@@ -141,13 +141,53 @@ with st.sidebar:
     
     st.header('Syntax Spion')
     st.html("""
-        <p style="color: #ede1c7;">
-            Created by:
+        <p style="color: #ede1c7;
+            font-family: Royal Avenue">
+            <a style="font-weight: 600;">Created by:</a> Devita Cantik <3 :*
         </p>
-        <p style="color: #ede1c7;">
-            Devita Cantik <3 :*.
+        <p style="color: #ede1c7; 
+            margin: 0 0 .5rem; 
+            font-weight: 600;
+            font-family: Royal Avenue">
+            Description: 
         </p>
-    """)
+
+        <style>
+        /* Container styling */
+        .scrollable-container {
+            width: auto; /* Lebar container */
+            height: 170px; /* Tinggi container */
+            overflow-y: scroll; /* Aktifkan scrollbar vertikal */
+            overflow-x: hidden; /* Nonaktifkan scrollbar horizontal */
+            background-color: rgba(147, 55, 35, 0.4); /* Warna latar */
+        }
+
+        /* Styling untuk teks */
+        .scrollable-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #ede1c7;
+            text-align: justify;
+        }
+        </style>
+                
+        <!-- Scrollable container -->
+        <div class="scrollable-container">
+            <p class="scrollable-text">
+                Bla bla bla bla bla bala bala bala bala bala 
+                bala bala bala bala bala bala bala bala bala 
+                bala bala bala bala bala bala bala bala bala 
+                bala bala bala bala bala bala bala bala bala 
+                bala bala bala bala bala bala bala bala bala 
+                bala bala bala bala bala bala bala bala bala
+                bala bala bala bala bala bala bala bala bala bala bala bala
+                bala bala bala bala bala bala bala bala bala bala bala bala
+                bala bala bala bala bala bala
+                bala bala bala bala bala bala bala bala bala
+                bala bala bala bala bala bala
+            </p>
+        </div>
+        """)
 
     img = get_img_as_base64("./Images/Sidebar.PNG")
 
