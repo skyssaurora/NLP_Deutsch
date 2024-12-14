@@ -140,6 +140,14 @@ def get_img_as_base64(file):
 with st.sidebar:
     
     st.header('Syntax Spion')
+    st.html("""
+        <p style="color: #ede1c7;">
+            Created by:
+        </p>
+        <p style="color: #ede1c7;">
+            Devita Cantik <3 :*.
+        </p>
+    """)
 
     img = get_img_as_base64("./Images/Sidebar.PNG")
 
@@ -281,7 +289,7 @@ st.html(
     <style>
     @font-face {{
         font-family: "Royal Avenue";
-        src: url('https://reminerva.github.io/royal-avenue-demo.ttf') format("truetype");
+        src: url('https://skyssaurora.github.io/royal-avenue-demo.ttf') format("truetype");
     }}
     </style>
     """
@@ -291,13 +299,13 @@ st.html(
     <style>
     @font-face {{
         font-family: "Source Sans Pro";
-        src: url('https://reminerva.github.io/royal-avenue-demo.ttf') format("truetype");
+        src: url('https://skyssaurora.github.io/royal-avenue-demo.ttf') format("truetype");
     }}
     </style>
     """
 )
 
-### Ubah font h1 dan h2
+### Ubah font h1 (title) dan h2 (sub-header / yang di sidebar)
 st.html(
     """
     <style>
@@ -331,16 +339,21 @@ st.html(
     """
 )
 
-### Warna svg (titik tiga dll)
-st.html(
+### Warna svg (titik tiga dan panah)
+components.html(
     """
-    <style>
-    button svg {
-        color: #000;
-    }
-    </style>
-    """
+    <script>
+    const button = window.parent.document.querySelectorAll("button svg");
+    button[0].style.color = '#FFF';
+    button[1].style.color = '#FFF';
+    button[2].style.color = '#FFF';
+    </script>
+    """,
+    height=0,
+    width=0,
 )
+
+### Warna svg (cloud)
 st.html(
     """
     <style>
@@ -361,6 +374,8 @@ st.html(
     </style>
     """
 )
+
+### Titik tiga dan panah di sidebar menjadi punya background hover
 st.html(
     """
     <style>
@@ -370,6 +385,8 @@ st.html(
     </style>
     """
 )
+
+### Panah sebelum di sidebar menjadi punya background hover
 st.html(
     """
     <style>
@@ -393,6 +410,7 @@ st.html(
     }}
     """)
 
+### Background Image HP biar tidak penyok
 st.html(
     f"""
     <style>
@@ -424,6 +442,7 @@ components.html(
 )
 
 ### Ubah warna isi kontainer
+#### Ubah warna kolom masukkan text
 st.html(
     """
     <style>
@@ -442,6 +461,8 @@ st.html(
     </style>
     """
 )
+
+#### Ubah warna kolom upload file
 st.html(
     """
     <style>
@@ -451,6 +472,8 @@ st.html(
     </style>
     """
 )
+
+### Ubah warna button
 st.html(
     """
     <style>
@@ -473,7 +496,6 @@ st.html(
 #         --gdg-bg-header-hovered: rgba(237, 225, 199, 0.5) !important;
 #         --gdg-bg-bubble: rgba(237, 225, 199, 1) !important;
 #         --gdg-bg-bubble-selected: rgba(237, 225, 199, 1) !important;
-        
 #     }
 #     </style>
 #     """
