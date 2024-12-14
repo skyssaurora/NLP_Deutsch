@@ -156,7 +156,7 @@ with st.sidebar:
         /* Container styling */
         .scrollable-container {
             width: auto; /* Lebar container */
-            height: 170px; /* Tinggi container */
+            height: 180px; /* Tinggi container */
             overflow-y: scroll; /* Aktifkan scrollbar vertikal */
             overflow-x: hidden; /* Nonaktifkan scrollbar horizontal */
             background-color: rgba(147, 55, 35, 0.4); /* Warna latar */
