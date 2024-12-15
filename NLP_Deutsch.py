@@ -174,7 +174,7 @@ with st.sidebar:
         <!-- Scrollable container -->
         <div class="scrollable-container">
             <p class="scrollable-text">
-                § (Syntax Spion) adalah aplikasi berbasis web yang dapat mendeteksi kalimat perbandingan dan lampau dalam bahasa Jerman, berfokus pada pola penggunaan „als“ di dalamnya.
+                § (Syntax Spion) membantu pengguna untuk membedakan penggunaan als dalam kalimat perbandingan dan lampau melalui penyajian tabel yang mudah dipahami. Dirancang untuk pembelajar pemula bahasa Jerman, tetapi tetap relevan bagi siapa saja yang ingin belajar bahasa Jerman lebih dalam.
             </p>
         </div>
         """)
