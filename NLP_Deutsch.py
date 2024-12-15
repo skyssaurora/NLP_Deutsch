@@ -139,7 +139,7 @@ def get_img_as_base64(file):
 
 with st.sidebar:
     
-    st.header('Syntax Spion (§)')
+    st.header('(§) Syntax Spion')
     st.html("""
         <p style="color: #ede1c7;
             font-family: Royal Avenue">
