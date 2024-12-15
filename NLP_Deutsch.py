@@ -143,7 +143,7 @@ with st.sidebar:
     st.html("""
         <p style="color: #ede1c7;
             font-family: Royal Avenue">
-            <a style="font-weight: 600;">Created by:</a> Devita, Auryn, Leya, Kia, Yuya, Riri
+            <a style="font-weight: 600;">Created by:</a> Namu, Auryn, Leya, Kia, Yuya, Riri
         </p>
         <p style="color: #ede1c7; 
             margin: 0 0 .5rem; 
