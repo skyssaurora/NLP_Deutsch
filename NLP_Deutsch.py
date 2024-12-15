@@ -174,17 +174,7 @@ with st.sidebar:
         <!-- Scrollable container -->
         <div class="scrollable-container">
             <p class="scrollable-text">
-                Bla bla bla bla bla bala bala bala bala bala 
-                bala bala bala bala bala bala bala bala bala 
-                bala bala bala bala bala bala bala bala bala 
-                bala bala bala bala bala bala bala bala bala 
-                bala bala bala bala bala bala bala bala bala 
-                bala bala bala bala bala bala bala bala bala
-                bala bala bala bala bala bala bala bala bala bala bala bala
-                bala bala bala bala bala bala bala bala bala bala bala bala
-                bala bala bala bala bala bala
-                bala bala bala bala bala bala bala bala bala
-                bala bala bala bala bala bala
+                § (Syntax Spion) adalah aplikasi berbasis web yang dapat mendeteksi kalimat perbandingan dan lampau dalam bahasa Jerman, berfokus pada pola penggunaan „als“ di dalamnya.
             </p>
         </div>
         """)
