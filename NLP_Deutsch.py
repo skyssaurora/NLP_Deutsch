@@ -202,7 +202,13 @@ with st.sidebar:
         }}
         </style>
         """)
-
+    with open("ManualBook-SyntaxSpion.pdf", "rb") as file:
+        st.download_button(
+        label="Unduh Manual Book",
+        data=file,
+        file_name="ManualBook-SyntaxSpion.pdf",
+        mime="text/pdf",
+    )
 
 
 with st.container():
